@@ -1,0 +1,28 @@
+header {
+    background: black;
+}
+header ul {
+    padding: 0;
+    display: flex;
+    align-items: right;
+    width: 75%;
+    margin: auto;
+}
+header ul span {
+    color: white;
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+header li {
+    list-style: none;
+    margin: .35em;
+    padding: 0 .95em;
+}
+header a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+nav {
+    border-top: 1px solid black;
+}
