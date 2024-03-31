@@ -1,0 +1,47 @@
+form.login {
+    width: 40%;
+    margin: 2em auto 0;
+    text-align: center;
+    font-family:fantasy;
+}
+.login fieldset {
+    border-radius: 0.3em;
+    padding: 0.8em;
+    background-color: aquamarine;
+}
+.login h2, .register h2 {
+    padding-top: 0;
+    border-bottom: none;
+}
+
+.login p {
+    padding-bottom: 0;
+    padding-top: 1.5rem;
+}
+.login input {
+    flex: 0 1 100%;
+    border: 1px solid;
+    padding: 0.3em;
+}
+
+.login select {
+    border-color: black;
+}
+
+.login a {
+    color: darkgreen
+}
+
+.login a:hover {
+    cursor: pointer;
+}
+
+p.error {
+    text-align:center;
+    color: red;
+    padding-top: 0;
+}
+
+.input-error {
+    border-left-color: red;
+}

@@ -1,0 +1,54 @@
+form.register {
+    width: 40%;
+    margin: 2em auto 0;
+    text-align: center;
+    font-family:fantasy;
+}
+.register fieldset {
+    border-radius: 0.3em;
+    padding: 0.8em;
+    background-color: #ffffff;
+}
+.register h2 {
+    padding-top: 0;
+    border-bottom: none;
+}
+
+.register p {
+    padding-bottom: 0;
+    padding-top: 1.5rem;
+}
+.register input {
+    flex: 0 1 100%;
+    border: 1px solid;
+    padding: 0.3em;
+    /* border-left: 0.3em solid green; */
+    /* border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em; */
+}
+
+.register select {
+    border-color: black;
+}
+
+.register a {
+    color: darkgreen
+}
+
+.register a:hover {
+    cursor: pointer;
+}
+
+.register .tel {
+    padding-right: 0.8em;
+}
+
+p.error {
+    text-align:center;
+    color: red;
+    padding-top: 0;
+}
+
+.input-error {
+    border-left-color: red;
+}
