@@ -1,0 +1,10 @@
+<h1>Cocktail Dashboard</h1>
+<div class="card-container">
+    <div *ngFor="let data of cocktails" class="card">
+    <img src="margarita.jpg" alt="{{data.name}}">
+    <div class="card-content">
+        <h2>{{data.name}}</h2>
+        <p>Ingredients: {{data.ingredients.join(',')}}</p>
+    </div>
+</div>
+</div>

@@ -1,0 +1,8 @@
+<div *ngFor="let data of cocktails" class="card">
+    <img src="{{data.imageURL}}" 
+    alt="{{data.name}}">
+    <div class="card-content">
+        <h2>{{data.name}}</h2>
+        <p>Ingredients: {{data.ingredients}}</p>
+    </div>
+</div>
