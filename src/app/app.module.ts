@@ -7,9 +7,11 @@ import { CoreComponent } from './core/core.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { UserModule } from './user/user.module';
-import { CocktailsListComponent } from './cocktails/cocktails-list/cocktails-list.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorComponent } from './error/error.component';
+import { FormsModule } from '@angular/forms';
+import { CocktailsModule } from './cocktails/cocktails.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,16 @@ import { HttpClientModule } from '@angular/common/http';
     CoreComponent,
     HeaderComponent,
     FooterComponent,
-    CocktailsListComponent,
-    HomeComponent
+    HomeComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     UserModule,
+    CocktailsModule,
     HttpClientModule,
+    FormsModule,
+    
     AppRoutingModule
   ],
   providers: [],

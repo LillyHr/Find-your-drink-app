@@ -1,17 +1,13 @@
-
 .container {
-    max-width: 400px;
-    margin: 100px auto;
-    text-align: center;
-    background-color: rgba(38, 37, 37, 0.5);
-    font-family: fantasy;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
     color: gold;
-    
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 .form-group {
@@ -20,12 +16,12 @@ h1 {
 
 label {
     display: block;
-    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
 input[type="text"],
-input[type="password"] {
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;

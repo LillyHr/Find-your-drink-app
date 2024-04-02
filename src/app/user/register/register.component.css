@@ -1,54 +1,52 @@
-form.register {
-    width: 40%;
-    margin: 2em auto 0;
+
+.container {
+    max-width: 400px;
+    margin: 100px auto;
     text-align: center;
-    font-family:fantasy;
-}
-.register fieldset {
-    border-radius: 0.3em;
-    padding: 0.8em;
-    background-color: #ffffff;
-}
-.register h2 {
-    padding-top: 0;
-    border-bottom: none;
+    background-color: rgba(38, 37, 37, 0.5);
+    color: gold;
+    font-family: fantasy;
+
 }
 
-.register p {
-    padding-bottom: 0;
-    padding-top: 1.5rem;
-}
-.register input {
-    flex: 0 1 100%;
-    border: 1px solid;
-    padding: 0.3em;
-    /* border-left: 0.3em solid green; */
-    /* border-top-right-radius: 0.3em;
-    border-bottom-right-radius: 0.3em; */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.register select {
-    border-color: black;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.register a {
-    color: darkgreen
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.register a:hover {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: large;
 }
 
-.register .tel {
-    padding-right: 0.8em;
-}
-
-p.error {
-    text-align:center;
-    color: red;
-    padding-top: 0;
-}
-
-.input-error {
-    border-left-color: red;
+button:hover {
+    background-color: green;
 }
