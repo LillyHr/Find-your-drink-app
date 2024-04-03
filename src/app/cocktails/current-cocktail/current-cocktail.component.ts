@@ -43,9 +43,8 @@ editCocktail(form: NgForm) {
 
 }
 
-deleteCocktail(id: String) {
-  const valueId = id.toString();
-  console.log(valueId);
+deleteCocktail(id: String) {  
+  const valueId: string = (this.cocktail._id).toString();
   
   this.cocktailService.deleteCocktail(valueId).subscribe(() => {
     this.router.navigate(['/cocktails']);
