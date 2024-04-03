@@ -48,3 +48,9 @@ button {
 button:hover {
     background-color: green;
 }
+a {
+    color: gold;
+}
+a:hover {
+    color: green;
+}

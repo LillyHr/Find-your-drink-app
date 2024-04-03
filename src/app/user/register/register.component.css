@@ -26,7 +26,9 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="tel"],
+input[type="password"],
+input[type="rePassword"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -49,4 +51,11 @@ button {
 
 button:hover {
     background-color: green;
+}
+
+a{
+    color: gold;
+}
+a:hover{
+    color: green;
 }
