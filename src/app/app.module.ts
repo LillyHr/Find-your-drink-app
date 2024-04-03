@@ -13,6 +13,7 @@ import { ErrorComponent } from './error/error.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CocktailsModule } from './cocktails/cocktails.module';
 import { appInterceptorProvider } from './app.interceptor';
+import { EmailDirective } from './validators/email.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { appInterceptorProvider } from './app.interceptor';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    EmailDirective
   ],
   imports: [
     BrowserModule,

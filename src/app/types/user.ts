@@ -9,3 +9,12 @@ export interface User {
     likes: String[],
     tel: String,
 }
+
+export interface UserAuth {
+    username: String,
+    email: String,
+    tel: String,
+    password: String,
+    cocktails: Cocktail[],
+    likes: String[],
+}
