@@ -1,20 +1,19 @@
 <div  *ngIf="!!isEmpty" class="card-container">
-    <div *ngFor="let data of cocktails" class="card">
-      <img src="{{data.imageURL}}" 
-      alt="{{data.name}}">
-      <div class="card-content">
-          <h2>{{data.name}}</h2>
-          <p>Ingredients: {{data.ingredients}}</p>
-          <p>Likes: {{data.likes || 0}}</p>
-  
-      </div>
-      <div  *ngIf="!isEmpty" class="card-container">
-          <h1>Sorry, there are no cocktails at this time.</h1>
-          <p>Let's get our groove on and make some magic!</p>
-          <a routerLink="/create-cocktail">Create a drink</a>
-  
-      </div> 
-  </div>
-  
-  </div>
-  
+  <div *ngFor="let cocktail of cocktails" class="card">
+    <img src="{{cocktail.imageURL}}" 
+    alt="{{cocktail.name}}">
+    <div class="card-content">
+        <h2>{{cocktail.name}}</h2>
+        <p>Ingredients: {{cocktail.ingredients}}</p>
+        <p>Likes: {{cocktail.likes || 0}}</p>
+<a [routerLink]="['/cocktails', cocktail._id]">Details</a>
+    </div>
+    <div  *ngIf="!isEmpty" class="card-container">
+        <h1>Sorry, there are no cocktails at this time.</h1>
+        <p>Let's get our groove on and make some magic!</p>
+        <a routerLink="/create-cocktail">Create a drink</a>
+
+    </div> 
+</div>
+
+</div>

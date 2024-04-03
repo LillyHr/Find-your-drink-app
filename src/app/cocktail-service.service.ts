@@ -12,22 +12,45 @@ export class CocktailService{
 
   getCocktails(): Observable<Cocktail[]> {
     const { apiUrl } = environment;
-    console.log('getting Cocktails');
     
       return this.http.get<Cocktail[]>(`${apiUrl}/cocktails`);
   }
 
   
   createDrink(
-    name: string, 
-    ingredients: string,
-    instructions: string,
-    imageURL: string
+  name: string, 
+  ingredients: string, 
+  instructions: string, 
+  imageURL: string
     ) {
       const { apiUrl } = environment;
-      const payload = { name, ingredients, instructions, imageURL};
-console.log('payload');
+      const payload = {name, ingredients, instructions, imageURL};
 
       return this.http.post<Cocktail>(`${apiUrl}/cocktails`, payload);
+    }
+
+    getCocktail(id: string): Observable<Cocktail> {
+      const { apiUrl } = environment;      
+      return this.http.get<Cocktail>(`${apiUrl}/cocktails/${id}`);
+    }
+
+    editCocktail(
+      id: string, 
+      name: string, 
+      ingredients: string, 
+      instructions: string, 
+      imageURL: string) {
+        
+      const { apiUrl } = environment;
+      const payload = {id, name, ingredients, instructions, imageURL};      
+
+      return this.http.put<Cocktail>(`${apiUrl}/cocktails/${id}`, payload);
+    }
+
+    deleteCocktail(id: string) {
+      const { apiUrl } = environment;
+      console.log('in service');
+      
+      return this.http.delete<Cocktail>(`${apiUrl}/cocktails/${id}`);
     }
 }

@@ -1,0 +1,72 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: gold;
+    font-family: fantasy;
+
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .cocktail-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cocktail-image {
+    width: 280px;
+    max-width: fit-content;
+    height:fit-content;
+  }
+
+  .ingredient {
+    font-weight: bold;
+  }
+
+  .instructions {
+    white-space: pre-line; /* Preserve line breaks */
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: green;
+}
+a {
+  padding-left: 10px;
+  color: gold;
+}
+a:hover {
+  color: green;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}

@@ -10,8 +10,9 @@ import { UserModule } from './user/user.module';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './error/error.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CocktailsModule } from './cocktails/cocktails.module';
+import { appInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,11 @@ import { CocktailsModule } from './cocktails/cocktails.module';
     UserModule,
     CocktailsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
-    
     AppRoutingModule
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,8 +4,9 @@ import { MainComponent } from './main/main.component';
 import { CocktailsComponent } from './cocktails/cocktails.component';
 import { CocktailsRoutingModule } from './cocktails-routing.module';
 import { CocktailsListComponent } from './cocktails-list/cocktails-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateCocktailComponent } from './create-cocktail/create-cocktail.component';
+import { CurrentCocktailComponent } from './current-cocktail/current-cocktail.component';
 
 
 
@@ -15,9 +16,10 @@ import { CreateCocktailComponent } from './create-cocktail/create-cocktail.compo
     CocktailsComponent, 
     CocktailsListComponent,
     CreateCocktailComponent,
+    CurrentCocktailComponent,
   ],
   imports: [
-    CommonModule, CocktailsRoutingModule, FormsModule
+    CommonModule, CocktailsRoutingModule, ReactiveFormsModule, FormsModule
   ]
 })
 export class CocktailsModule { }

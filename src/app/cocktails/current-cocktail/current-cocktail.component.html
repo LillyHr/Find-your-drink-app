@@ -1,0 +1,55 @@
+<div *ngIf="!isEditing" class="container">
+  <h1>{{cocktail.name}}</h1>
+  
+  <div class="cocktail-details">
+    <img src="{{cocktail.imageURL}}" alt="Cocktail Image" class="cocktail-image">
+    <p><span class="ingredient">Cocktail Name:</span> {{cocktail.name}}</p>
+    <p><span class="ingredient">Ingredients:</span> {{cocktail.ingredients}}</p>
+    <p><span class="ingredient">Instructions:</span><br>{{cocktail.instructions}}</p>
+    <button (click)="isEditing = !isEditing">Edit</button>
+
+    <p><span class="ingredient">Browse for more inspiration:</span>
+    <a routerLink="/cocktails">Back to Dashboard</a>
+    </p>
+  </div>
+</div>
+
+<div *ngIf="isEditing" class="container">
+  <h1>Edit Cocktail</h1>
+  
+  <form #form="ngForm" (ngSubmit)="editCocktail(form)">
+    <div class="form-group">
+      <label for="name">Cocktail Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="cocktail.name" 
+      required
+      ngModel
+      >
+    </div>
+    <div class="form-group">
+      <label for="ingredients">Ingredients:</label>
+      <textarea id="ingredients" name="ingredients" [(ngModel)]="cocktail.ingredients" 
+      required
+      ngModel
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="instructions">Instructions:</label>
+      <textarea id="instructions" name="instructions" [(ngModel)]="cocktail.instructions" 
+      required
+      ngModel
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="imageURL">imageURL:</label>
+      <input type="text" id="imageURL" name="imageURL" 
+      required
+      ngModel
+      #inputImageURL="ngModel"
+      >
+  </div>
+    <button type="submit" (click)="editCocktail(form)">Save Changes</button>
+    <button type="submit" (click)="deleteCocktail(form.value?.id)">Delete Cocktail</button>
+    <button (click)="isEditing = !isEditing">Cancel</button>
+
+  </form>
+</div>

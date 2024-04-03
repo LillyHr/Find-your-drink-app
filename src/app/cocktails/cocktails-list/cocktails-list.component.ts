@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/api.service';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { CocktailService } from 'src/app/cocktail-service.service';
 import { Cocktail } from 'src/app/types/cocktailsType';
 
 @Component({
@@ -9,15 +9,13 @@ import { Cocktail } from 'src/app/types/cocktailsType';
 })
 export class CocktailsListComponent implements OnInit {
   cocktails: Cocktail[] | null = [];
-  isEmpty: boolean = false;
-
-constructor(private apiService: ApiService) {}
-
+constructor(private cocktailService: CocktailService,
+  ) {}
+isEmpty: boolean = false;
   ngOnInit(): void {
-    this.apiService.getCocktails().subscribe((data) => {
-console.log('data');
-
-      this.cocktails = data;
+    this.cocktailService.getCocktails().subscribe((data) => {
+this.cocktails = data;
+return this.cocktails;
     });
     if (this.cocktails?.length === 0) {
       this.isEmpty = true;
