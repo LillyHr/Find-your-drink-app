@@ -15,6 +15,7 @@ export interface UserAuth {
     email: String,
     tel: String,
     password: String,
+    rePassword: String,
     cocktails: Cocktail[],
     likes: String[],
 }

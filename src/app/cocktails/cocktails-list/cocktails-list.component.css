@@ -4,7 +4,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: calc(33.33% - 20px);
     margin-bottom: 20px;
-    overflow: hidden;
+    overflow:auto;
     font-family: fantasy;
     color: black;
     
@@ -66,4 +66,18 @@ a {
 }
 a:hover {
     background-color: green;
+}
+
+.card-noCocktails{
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    display: flex;
+    height: 600px;
+}
+
+.card-noCocktails p {
+    font-size: 24px;
+    color: gold;
+    margin-bottom: 20px;
 }

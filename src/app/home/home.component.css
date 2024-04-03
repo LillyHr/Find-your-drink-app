@@ -4,11 +4,11 @@
     margin: 100px auto;
     text-align: center;
     font-family: fantasy;
-    background-color: rgba(38, 37, 37, 0.5);
+    background-color: rgba(38, 37, 37, 0.8);
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 46px;
     color: #333;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -16,7 +16,7 @@ h1 {
 }
 
 p {
-    font-size: 18px;
+    font-size: 28px;
     color: #666;
     margin-bottom: 30px;
     color: gold;
@@ -26,6 +26,7 @@ p {
 .btn {
     display: inline-block;
     padding: 10px 20px;
+    font-size: large;
     background-color: gold;
     color: black;
     text-decoration: none;
