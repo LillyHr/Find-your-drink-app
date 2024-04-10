@@ -57,4 +57,11 @@ export class CocktailService{
       const { apiUrl } = environment;      
       return this.http.delete<Cocktail>(`${apiUrl}/cocktails/${id}`);
     }
+    onSearchByName(query: string) {
+      const { apiUrl } = environment;
+      
+      return this.http.get<Cocktail>(`${apiUrl}/cocktails/${query}`);
+      // Handle the search by name logic here
+      // console.log('Search by name query:', query);
+    }
 }

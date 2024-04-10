@@ -33,9 +33,9 @@ isLiked: boolean = false;
     };
     onToggle: boolean = true;
 
-onEdit() {
-  // this.editCocktail()
-}
+// onEdit() {
+//   // this.editCocktail()
+// }
 editCocktail(form: NgForm) {
   if (form.invalid) {return}
   form.value.id = this.cocktail._id;
@@ -47,19 +47,20 @@ editCocktail(form: NgForm) {
     form.value.imageURL).subscribe(cocktail => {
       this.cocktail = cocktail;
     }) 
+    this.router.navigate([`/view/cocktails/`]);
 
 }
 
-toggleLikedByUser(id: string): void {
-  this.cocktail._id = id;
-  this.cocktail.likedByUser = !this.cocktail.likedByUser;
-  this.cocktailService.updateCocktail(this.cocktail._id).subscribe(cocktail => {
-    this.cocktail = cocktail;
-    this.isLiked = !this.isLiked;
-    this.router.navigate(['/view/dashboard']);
+// toggleLikedByUser(id: string): void {
+//   this.cocktail._id = id;
+//   this.cocktail.likedByUser = !this.cocktail.likedByUser;
+//   this.cocktailService.updateCocktail(this.cocktail._id).subscribe(cocktail => {
+//     this.cocktail = cocktail;
+//     this.isLiked = !this.isLiked;
+//     // this.router.navigate(['/view/dashboard']);
 
-  });
-}
+//   });
+// }
 
 
 

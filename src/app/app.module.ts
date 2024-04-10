@@ -14,6 +14,7 @@ import { appInterceptorProvider } from './app.interceptor';
 import { EmailDirective } from './validators/email.directive';
 import { AuthComponent } from './auth/auth.component';
 import { ErrorComponent } from './core/error/error.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ErrorComponent } from './core/error/error.component';
     NotFoundComponent,
     EmailDirective,
     AuthComponent,
-    ErrorComponent
+    ErrorComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

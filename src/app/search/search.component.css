@@ -1,0 +1,36 @@
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: fantasy;
+    color: gold;
+    background-color: rgba(38, 37, 37, 0.5);
+}
+h2 {
+    padding: 20px;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: green;
+}

@@ -6,28 +6,45 @@
             <input type="text" id="name" name="name" 
             formControlName="name"
             >
-            <!-- <ng-container *ngIf="inputName.touched">
-                <p *ngIf="inputName?.errors?.['required']"
-                 class="error">
-                 Cocktail name is required.
+            <ng-container *ngIf="form.get('name')?.touched">
+                <p class="error" *ngIf="form.get('name')?.errors?.['required']">
+                    Cocktail name is required!
                 </p>
-                <p *ngIf="inputName?.errors?.['minlength']"
+                <p *ngIf="form.get('name')?.errors?.['minlength']"
                  class="error">
                  Cocktail name must be at least 5 characters long.
                 </p>
-            </ng-container> -->
+            </ng-container>
         </div>
         <div class="form-group">
             <label for="ingredients">Ingredients:</label>
             <textarea id="ingredients" name="ingredients" rows="4" 
             formControlName="ingredients"
             ></textarea>
+            <ng-container *ngIf="form.get('ingredients')?.touched">
+                <p class="error" *ngIf="form.get('ingredients')?.errors?.['required']">
+                    Cocktail ingredients is required!
+                </p>
+                <p *ngIf="form.get('ingredients')?.errors?.['minlength']"
+                 class="error">
+                 Cocktail ingredients must be at least 5 characters long.
+                </p>
+            </ng-container>
         </div>
         <div class="form-group">
             <label for="instructions">Instructions:</label>
             <textarea id="instructions" name="instructions" rows="4" 
             formControlName="instructions"
             ></textarea>
+            <ng-container *ngIf="form.get('instructions')?.touched">
+                <p class="error" *ngIf="form.get('instructions')?.errors?.['required']">
+                    Cocktail ingredients is required!
+                </p>
+                <p *ngIf="form.get('instructions')?.errors?.['minlength']"
+                 class="error">
+                 Cocktail ingredients must be at least 5 characters long.
+                </p>
+            </ng-container>
         </div>
 
         <div class="form-group">

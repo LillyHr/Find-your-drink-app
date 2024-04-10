@@ -9,8 +9,8 @@
     <p>Likes: {{cocktail.likes || 0}}</p>
 
     <button (click)="onToggle = !onToggle">Edit</button>
-    <button (click)="toggleLikedByUser(cocktail._id)" *ngIf="!isLiked">Like</button>
-    <button (click)="toggleLikedByUser(cocktail._id)" *ngIf="isLiked">Unlike</button>
+    <!-- <button (click)="toggleLikedByUser(cocktail._id)" *ngIf="!isLiked">Like</button> -->
+    <!-- <button (click)="toggleLikedByUser(cocktail._id)" *ngIf="isLiked">Unlike</button> -->
 
     <p><span class="ingredient">Browse for more inspiration:</span>
     <a routerLink="/view/cocktails">Back to Dashboard</a>
@@ -21,7 +21,7 @@
   <div class="container">
   <h1>Edit Cocktail</h1>
   
-  <form #form="ngForm" (ngSubmit)="onEdit()">
+  <form #form="ngForm" (ngSubmit)="editCocktail(form)">
     <div class="form-group">
       <label for="name">Cocktail Name:</label>
       <input type="text" id="name" name="name" [(ngModel)]="cocktail.name" 

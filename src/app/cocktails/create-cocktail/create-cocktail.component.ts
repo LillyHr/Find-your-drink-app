@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { CocktailService } from 'src/app/cocktail-service.service';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/user/user.service';
@@ -15,9 +15,9 @@ export class CreateCocktailComponent {
   }
   // @Input() cocktail: Cocktail[] = [];
 form = this.fb.group({
-  name: [''],
-  ingredients: [''],
-  instructions: [''],
+  name: ['', [Validators.required, Validators.minLength(2)]],
+  ingredients: ['', [Validators.required, Validators.minLength(2)]],
+  instructions: ['', [Validators.required]],
   imageURL: ['']
 })
 
