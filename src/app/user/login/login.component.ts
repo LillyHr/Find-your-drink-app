@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 domains = EMAIL_DOMAIN;
-
+isLoggedIn: boolean = false;
 constructor(
   private userService: UserService,
   private router: Router
@@ -29,3 +29,5 @@ login(form: NgForm) {
 
 }
 }
+
+export let isLoggedIn: boolean = true;

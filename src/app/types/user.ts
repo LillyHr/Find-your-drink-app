@@ -1,21 +1,30 @@
 import { Cocktail } from "./cocktailsType";
 
 export interface User {
-    id: String,
-    name: String,
-    email: String,
-    password: String,
-    cocktails: Cocktail[],
-    likes: String[],
-    tel: String,
+    name: string,
+    email: string,
+    password: string,
+    createdCocktails: Cocktail[],
+    likedCocktails: string[],
+    tel: string,
+    
 }
 
 export interface UserAuth {
-    username: String,
-    email: String,
-    tel: String,
-    password: String,
-    rePassword: String,
-    cocktails: Cocktail[],
-    likes: String[],
+    id : string[],
+    username: string,
+    email: string,
+    tel: string,
+    password: string,
+    rePassword: string,
+    createdCocktails: string[],
+    likedCocktails: string[],
 }
+
+export interface ProfileDetails {
+    username: string;
+    email: string;
+    tel: string;
+    // createdCocktails: string[],
+    // likedCocktails: string[],
+  }

@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Edit Profile</h2>
+    <form [formGroup]="form" (ngSubmit)="SaveProfile()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"
+            formControlName="username" [value]="profileDetails.username"
+            >
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+            formControlName="email" [value]="profileDetails.email"
+            >
+        </div>
+        <div class="form-group">
+            <label for="telephone">Telephone:</label>
+            <input type="tel" id="telephone" name="telephone"
+            formControlName="tel" [value]="profileDetails.tel"
+            >
+        </div>
+        <button>Save changes</button>
+<a routerLink="/auth/profile">Cancel</a>    
+</form>
+</div>

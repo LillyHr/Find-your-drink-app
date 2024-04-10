@@ -5,6 +5,7 @@ import { emailValidator } from 'src/app/utils/email-validator';
 import { matchPasswordsValidator } from 'src/app/utils/mathc-passwords-validator';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+// import { isLoggedin } from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -23,7 +24,6 @@ export class RegisterComponent {
       validators: [matchPasswordsValidator('password', 'rePassword')],
     })
     })
-    
     constructor(
       private fb: FormBuilder,
       private userService: UserService,

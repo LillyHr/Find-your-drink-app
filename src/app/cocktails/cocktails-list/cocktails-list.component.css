@@ -81,3 +81,7 @@ a:hover {
     color: gold;
     margin-bottom: 20px;
 }
+.liked {
+    background-color: #007bff;
+    color: #fff;
+  }

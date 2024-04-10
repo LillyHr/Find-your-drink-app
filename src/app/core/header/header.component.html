@@ -5,19 +5,25 @@
             <a routerLink="/">Home</a>
             </li>
             <li>
-                <a routerLink="/cocktails">Dashboard</a>
+                <a routerLink="/view/cocktails">Dashboard</a>
             </li>
-            <li>
-                <a routerLink="/login">Login</a>
+            <li *ngIf="!isLoggedIn">
+                <a routerLink="/auth/login">Login</a>
             </li>
-            <li (click)="logout()">
+            <li *ngIf="isLoggedIn" (click)="logout()">
                 <a>Logout</a>
             </li>
-            <li>
-                <a routerLink="/register">Register</a>
+            <li *ngIf="!isLoggedIn">
+                <a routerLink="/auth/register">Register</a>
             </li>
-            <li>
-                <a routerLink="/create-cocktail">Create a drink</a>
+            <li *ngIf="isLoggedIn">
+                <a routerLink="/view/create-cocktail">Create a drink</a>
+            </li>
+            <li *ngIf="isLoggedIn">
+                <a routerLink="/auth/profile">Profile</a>
+            </li>
+            <li >
+                <!-- <a routerLink="/view/search">Search</a> -->
             </li>
 
         </ul>

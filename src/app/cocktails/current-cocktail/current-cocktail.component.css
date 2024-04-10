@@ -7,6 +7,8 @@
     color: gold;
     font-family: fantasy;
     text-align: center;
+    box-sizing: border-box;
+    min-height: 100vh; /* Make container at least as tall as the viewport */
 
   }
 
@@ -24,13 +26,15 @@
   }
 
   .cocktail-image {
-    width: 280px;
+    width: 200px;
     max-width: fit-content;
     height:fit-content;
     align-self: center;
+    /* margin-bottom: -130px; */
   }
 
   .ingredient {
+    margin: 10px;
     font-weight: bold;
   }
 
@@ -41,8 +45,9 @@
     display: flex;
     justify-content: center;
     align-self: center;
-
-    width: 50%;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 30px;
     padding: 10px;
     background-color: gold;
     color: black;

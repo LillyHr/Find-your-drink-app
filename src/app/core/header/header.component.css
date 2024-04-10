@@ -29,3 +29,8 @@ nav {
     border-bottom: 1px solid black;
     
 }
+header li :hover{
+    background-color: gold;
+    transition: background-color 0.3s;
+    color: black;
+}

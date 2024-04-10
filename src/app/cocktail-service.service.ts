@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Cocktail } from './types/cocktailsType';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment.development';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -46,11 +47,14 @@ export class CocktailService{
 
       return this.http.put<Cocktail>(`${apiUrl}/cocktails/${id}`, payload);
     }
+    updateCocktail(id: string) {
+      const { apiUrl } = environment;
+      // Replace this with your actual backend API call to update cocktail
+      return this.http.put<Cocktail>(`${apiUrl}/cocktails/${id}/like`, id);
+    }
 
     deleteCocktail(id: string) {
-      const { apiUrl } = environment;
-      console.log('in service');
-      
+      const { apiUrl } = environment;      
       return this.http.delete<Cocktail>(`${apiUrl}/cocktails/${id}`);
     }
 }

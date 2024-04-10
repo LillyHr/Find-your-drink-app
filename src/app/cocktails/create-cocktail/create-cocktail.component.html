@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="isLoggedIn" class="container">
     <h1>Create a Cocktail</h1>
     <form [formGroup]="form" (ngSubmit)="createDrink()">
         <div class="form-group">

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CocktailService } from 'src/app/cocktail-service.service';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-create-cocktail',
@@ -9,6 +10,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-cocktail.component.css']
 })
 export class CreateCocktailComponent {
+  get isLoggedIn(): boolean {
+    return this.userService.isLoggedIn;
+  }
   // @Input() cocktail: Cocktail[] = [];
 form = this.fb.group({
   name: [''],
@@ -18,6 +22,7 @@ form = this.fb.group({
 })
 
   constructor(
+    private userService: UserService,
     private cocktailService: CocktailService, 
     private router: Router,
     private fb: FormBuilder) {}
@@ -28,7 +33,7 @@ const {name, ingredients, instructions, imageURL} = this.form.value;
 // console.log(form.value);
 // form.value.inputName
 this.cocktailService.createDrink(name!, ingredients!, instructions!, imageURL!).subscribe(() => {
-    this.router.navigate(['/cocktails']);
+    this.router.navigate(['/view/cocktails']);
   })
 }
 }

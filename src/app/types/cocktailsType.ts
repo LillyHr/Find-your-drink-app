@@ -1,12 +1,12 @@
 import { User } from "./user";
 
 export interface Cocktail {
-    "_id": String,
-    "name": String,
-    "ingredients": String,
-    "instructions": String,
-    "imageURL": String,
+    "_id": string,
+    "name": string,
+    "ingredients": string,
+    "instructions": string,
     "userId": User | undefined,
-    "likedBy": String[],
-    "likes": String,  
+    "imageURL": string,
+    "likedByUser": boolean,
+    "likes": string[],
 }

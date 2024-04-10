@@ -1,1 +1,54 @@
-<p>profile works!</p>
+  <div class="whole-container">
+      <div class="container">
+        <div class="profile-header">
+            <img class="profile-picture" 
+            src="https://static.vecteezy.com/system/resources/thumbnails/009/209/212/small/neon-glowing-profile-icon-3d-illustration-vector.jpg" 
+            alt="Profile Picture">
+            <div class="profile-name">{{profileDetails.username}}</div>
+            <div class="profile-info">{{profileDetails.email}}</div>
+            <div class="profile-info">{{profileDetails.tel}}</div>
+            <a routerLink="/auth/edit">Edit Profile</a>
+        </div>
+
+<!-- <div class="container-cocktails">
+    <div *ngIf=""
+    class="card-noCocktails" style="display: block;">
+        <h1>Sorry, there are no cocktails at this time.</h1>
+        <p>Let's get our groove on and make some magic!</p>
+        <a routerLink="/view/create-cocktail">Create a drink</a>
+
+            <div>
+            <h2>Created Cocktails</h2>
+        <div *ngFor="let cocktail of createdCocktails" class="cocktail-list">
+            <div class="cocktail-item">
+                <img src="{{cocktail.imageURL}}" alt="Cocktail 1">
+                <div>
+                    <div class="cocktail-name">
+                        <a [routerLink]="['/view/cocktails', cocktail._id]">
+                            {{cocktail.name}}
+                        </a>
+                    </div>
+                    <div class="cocktail-description">{{cocktail.ingredients}}</div>
+                </div>
+            </div>
+        </div>
+        </div>
+<div>
+    <h2>Liked Cocktails</h2>
+            <div *ngFor="let cocktail of likedCocktails" class="cocktail-aside">
+            <div class="cocktail-item">
+                <img src="{{cocktail.imageURL}}" alt="Cocktail 3">
+                <div>
+                    <div class="cocktail-name">
+                        <a [routerLink]="['/view/cocktails', cocktail._id]">
+                            {{cocktail.name}}
+                        </a>                    </div>
+                    <div class="cocktail-description">{{cocktail.ingredients}}</div>
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+    </div> -->
+  </div> 
+ 

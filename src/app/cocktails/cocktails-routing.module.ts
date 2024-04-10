@@ -9,9 +9,11 @@ const routes: Routes = [
         {path: '', pathMatch: 'full', component: MainComponent},
         {path: ':cocktailId', component: CurrentCocktailComponent},
         {path: ':cocktailId', component: CurrentCocktailComponent}
-    ]}, {
+    ]}, 
+    {
         path: 'create-cocktail', component: CreateCocktailComponent
-    },        {
+    },        
+    {
         path: 'dashboard', component: MainComponent
     }
 ]

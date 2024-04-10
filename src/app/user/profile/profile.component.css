@@ -1,0 +1,96 @@
+.whole-container {
+    background-color: rgba(38, 37, 37, 0.5);
+    font-family: fantasy;
+    margin-top: 150px;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+a {
+    color: black;
+    background-color: gold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 5px;
+
+}
+
+a:hover {
+    background-color: green;
+}
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-picture {
+    
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.profile-name {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.profile-info {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.container-cocktails {
+    background-color: gold;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cocktail-list {
+    margin-bottom: 30px;
+    width: 400px;
+}
+.h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.cocktail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cocktail-item img {
+    width: 80px;
+    height: 80px;
+    object-fit:scale-down;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.cocktail-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.cocktail-description {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+.cocktail-aside {
+    width: 300px;
+    padding: 20px;
+
+}
+.h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
