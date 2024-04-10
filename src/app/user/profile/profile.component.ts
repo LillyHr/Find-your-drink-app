@@ -20,7 +20,7 @@ profileDetails: ProfileDetails = {
 
 
 constructor(
-  private cocktailService: CocktailService,
+  // private cocktailService: CocktailService,
   private userService: UserService
 ) {}
 
